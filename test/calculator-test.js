@@ -30,5 +30,9 @@ describe('Calculator', function() {
   	 	assert.equal("NaN",Calculator.divide(0,0))
   	 });
   });
-  
+  describe('multiply', function(){
+     it('should return 10 when inputs are 5,2',function(){
+       assert.equal(10,Calculator.multiply(5,2))
+     });
+  });
 });

@@ -2,7 +2,7 @@ function sum(a, b) {
   return a+b;
 }
 function subtract(a,b){
-	return 0;
+	return a-b;
 }
 function divide(a,b){
 	var div=a/b;
@@ -10,10 +10,14 @@ function divide(a,b){
 	else if(!isFinite(div)) return "Infinity";
 	else return div;
 }
+function multiply(a,b){
+	return a*b;
+}
 module.exports = {
   sum: sum,
   subtract: subtract,
-  divide: divide
+  divide: divide,
+  multiply: multiply
 }
 
 
