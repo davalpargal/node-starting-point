@@ -1,9 +1,12 @@
 function sum(a, b) {
-  return a + b;
+  return a+b;
 }
-
+function subtract(a,b){
+	return 0;
+}
 module.exports = {
-  sum: sum 
+  sum: sum,
+  subtract: subtract
 }
 
 
