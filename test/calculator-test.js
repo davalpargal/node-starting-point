@@ -16,6 +16,19 @@ describe('Calculator', function() {
        assert.equal(0,Calculator.subtract(1,1))
      });
   });
-  
+  describe('divide',function(){
 
+  	 it('should return 4 when inputs are 8,2',function(){
+  	 	assert.equal(4,Calculator.divide(8,2))
+  	 });
+
+  	 it('Infinity when inputs are 3,0',function(){
+  	 	assert.equal("Infinity",Calculator.divide(3,0))
+  	 });
+
+  	 it('NaN when inputs are 0,0',function(){
+  	 	assert.equal("NaN",Calculator.divide(0,0))
+  	 });
+  });
+  
 });
