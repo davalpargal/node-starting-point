@@ -8,7 +8,7 @@ function subtract(a,b){
 
 function divide(a,b){
 	var div=a/b;
-    if(isNaN(div)) throw new Error('Not a number error');
+  if(isNaN(div)) throw new Error('Not a number error');
 	else if(!isFinite(div)) return "Infinity";
 	else return div;
 }
@@ -26,7 +26,7 @@ function sqr(a){
 }
 
 function sqrRoot(a){
-  if(a<0) throw new Error("Get a life bro!!")
+  if(a<0) throw new Error("Sqrroot are not defined for negative no.")
   return Math.sqrt(a);
 }
 
