@@ -66,31 +66,21 @@ server.register(require('inert'), (err) => {
         }
     });
 });
-//Apis
-var makeCalc = {
+
+// Pushing APIs to server
+server.route([{
   method: 'POST',
   path: '/makeCalculator',
   handler: makeCalculator
-};
-
-var getCalc = {
-  method: 'GET',
-  path: '/getCalculator',
-  handler: getCalculator
-};
-
-var operate = {
+},{
   method: 'GET',
   path: '/calculate',
   handler: calculate
-};
-// JSON consisting APIs
-var jsonArray = [];
-jsonArray.push(makeCalc);
-jsonArray.push(getCalc);
-jsonArray.push(operate);
-// Pushing APIs to server
-server.route(jsonArray);
+}, {
+  method: 'GET',
+  path: '/getCalculator',
+  handler: getCalculator
+}]);
 
 server.start((err) => {
 
